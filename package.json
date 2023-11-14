@@ -13,7 +13,7 @@
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
-      "title": "PLSQL Executor"
+      "title": "PLSQL Executor",
       "properties": {
         "plsql-executor.plsqlPath": {
           "type": "string",
@@ -21,7 +21,7 @@
           "description": "Il path dove si trova il file sqlplus.exe"
         }
       }
-    }
+    },
     "commands": [
       {
         "command": "plsql-executor.runSqlFile",
