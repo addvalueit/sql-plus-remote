@@ -13,13 +13,22 @@
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
+      "type": "object",
       "title": "PLSQL Executor",
       "properties": {
-        "plsql-executor.plsqlPath": {
-          "type": "string",
-          "default": false,
-          "description": "Il path dove si trova il file sqlplus.exe"
-        }
+          "plsql-executor.sqlplusPath": {
+            "type": "string",
+            "description": "Il path dove si trova il file sqlplus.exe"
+          },
+          "plsql-executor.profile": {
+            "type": "string",
+            "description": "Profilo di default da utilizzare"
+          }, 
+          "plsql-executor.profiles": {
+            "type": "object",
+            "description": "Profili di connessione verso i vari ambienti",
+            "additionalProperties": {}
+          }
       }
     },
     "commands": [
