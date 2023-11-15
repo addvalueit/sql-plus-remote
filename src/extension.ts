@@ -58,7 +58,7 @@ function runSqlFile() {
           const terminal = activeTerminalProfile.terminal;
           terminal.show(true);
           // Esegui il comando "@<percorsofileaperto>;"
-          terminal.sendText(`@${filename};`);
+          terminal.sendText(`@"${filename}";`);
         }
       }else{
         console.log('Nessuno script selezionato');
