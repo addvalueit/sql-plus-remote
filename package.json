@@ -11,37 +11,6 @@
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
-  "contributes": {
-    "configuration": {
-      "type": "object",
-      "title": "PLSQL Executor",
-      "properties": {
-          "plsql-executor.sqlplusPath": {
-            "type": "string",
-            "description": "Il path dove si trova il file sqlplus.exe"
-          },
-          "plsql-executor.profile": {
-            "type": "string",
-            "description": "Profilo di default da utilizzare"
-          }, 
-          "plsql-executor.profiles": {
-            "type": "object",
-            "description": "Profili di connessione verso i vari ambienti",
-            "additionalProperties": {}
-          }
-      }
-    },
-    "commands": [
-      {
-        "command": "plsql-executor.runSqlFile",
-        "title": "Run current script"
-      },
-      {
-        "command": "plsql-executor.launchTerminal",
-        "title": "Open Terminal"
-      }
-    ]
-  },
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",
@@ -67,5 +36,45 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "@vscode/test-electron": "^2.3.4"
+  },
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "PLSQL Executor",
+      "properties": {
+          "plsql-executor": {
+            "type": "object",
+            "properties": {
+              "sqlplusPath": {
+                "type": "string",
+                "order": 1,
+                "description": "Il path dove si trova il file sqlplus.exe"
+              },
+              "profile": {
+                "type": "string",
+                "order": 2,
+                "description": "Profilo di default da utilizzare"
+              }, 
+              "profiles": {
+                "type": "object",
+                "order": 3,
+                "description": "Profili di connessione verso i vari ambienti",
+                "properties": {
+                  
+                }
+              }
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "plsql-executor.runSqlFile",
+        "title": "Run current script"
+      },
+      {
+        "command": "plsql-executor.launchTerminal",
+        "title": "Open Terminal"
+      }
+    ]
   }
 }
