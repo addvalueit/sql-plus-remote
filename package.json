@@ -102,11 +102,22 @@
     "commands": [
       {
         "command": "plsql-executor.runSqlFile",
-        "title": "Run current script"
+        "title": "Run current script",
+        "category": "PLSQL",
+        "icon": "$(debug-start)"
       },
       {
         "command": "plsql-executor.launchTerminal",
-        "title": "Open Terminal"
+        "title": "Open Terminal",
+        "category": "PLSQL",
+        "icon": "$(terminal)"
+      }
+    ],
+    "keybindings":[
+      {
+        "command": "plsql-executor.runSqlFile",
+        "key": "ctrl+f3",
+        "when": "editorTextFocus"
       }
     ]
   }
