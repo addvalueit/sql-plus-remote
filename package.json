@@ -39,30 +39,63 @@
   },
   "contributes": {
     "configuration": {
-      "type": "object",
       "title": "PLSQL Executor",
       "properties": {
-          "plsql-executor": {
+        "plsql-executor.sqlplusPath": {
+          "type": "string",
+          "order": 1,
+          "description": "Il path dove si trova il file sqlplus.exe",
+          "additionalProperties": false
+        },
+        "plsql-executor.defaultProfile": {
+          "type": "string",
+          "order": 2,
+          "description": "Profilo di default da utilizzare",
+          "additionalProperties": false
+        },
+        "plsql-executor.profiles": {
+          "type": "array",
+          "order": 3,
+          "description": "Profili di connessione verso i vari ambienti",
+          "items": {
             "type": "object",
             "properties": {
-              "sqlplusPath": {
+              "name": {
                 "type": "string",
                 "order": 1,
-                "description": "Il path dove si trova il file sqlplus.exe"
+                "description": "Il nome del profilo",
+                "additionalProperties": false
               },
-              "profile": {
-                "type": "string",
-                "order": 2,
-                "description": "Profilo di default da utilizzare"
-              }, 
-              "profiles": {
+              "connectionString": {
                 "type": "object",
-                "order": 3,
-                "description": "Profili di connessione verso i vari ambienti",
+                "description": "La definizione della connessione",
+                "order":2,
                 "properties": {
-                  
-                }
+                  "user": {
+                    "type": "string",
+                    "order": 1,
+                    "description": "Lo username per la connessione"
+                  },
+                  "password": {
+                    "type": "string",
+                    "order": 2,
+                    "description": "La password per la connessione"
+                  },
+                  "dbAddress": {
+                    "type": "string",
+                    "order": 3,
+                    "description": "L'indirizzo del DB per la connessione"
+                  },
+                  "dbService": {
+                    "type": "string",
+                    "order": 4,
+                    "description": "Lo username per la connessione"
+                  }
+                },
+                "additionalProperties": false
               }
+            }
+          }
         }
       }
     },
