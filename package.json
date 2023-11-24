@@ -111,6 +111,12 @@
         "title": "Open Terminal",
         "category": "PLSQL",
         "icon": "$(terminal)"
+      },
+      {
+        "command": "plsql-executor.selectProfile",
+        "title": "Select Profile",
+        "category": "PLSQL",
+        "icon": "$(terminal)"
       }
     ],
     "keybindings":[
