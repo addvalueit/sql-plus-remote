@@ -1,71 +1,53 @@
-# plsql-executor README
+# SQLPlus Remote Executor README
 
-This is the README for your extension "plsql-executor". After writing up a brief description, we recommend including the following sections.
+The "SQLPlus Remote Executor" extension for Visual Studio Code provides a powerful tool for Oracle database developers and administrators who wish to execute SQL scripts remotely using SQLPlus. Integrating directly with VS Code, this extension simplifies the process of connecting and executing SQL scripts on Oracle databases from any location.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+* __Simplified Connection__: Quickly access your Oracle databases by entering essential connection information directly from the VS Code user interface.
 
-For example if there is an image subfolder under your extension project workspace:
+* __Connection Management__: Save your favorite connection configurations for quick and hassle-free access to different Oracle databases.
 
-\!\[feature X\]\(images/feature-x.png\)
+* __Remote Execution__: Use the SQLPlus tool to run SQL scripts directly on your Oracle database, regardless of the physical location of the database.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* __Displaying Results__: Visualizza i risultati delle query direttamente in VS Code, facilitando l'analisi e la comprensione dei dati restituiti.
+
+* __Multi-Database Compatibility__: It supports connecting to several Oracle databases at once, allowing you to work on multiple projects without having to constantly reconfigure connections.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+You must have the SQLPlus tool installed on the same machine on which Visual Studio Code is running. SQLPlus is the command-line interface tool provided by Oracle for running SQL commands and scripts on Oracle databases. Make sure the tool is configured correctly and can be run from the command line.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `plsql-executor.sqlplusPath`: Folder in which the SQLPath tool is installed..
+* `plsql-executor.defaultProfile`: Default profile for running scripts
+* `plsql-executor.profiles`: Array describing the various connection profiles, the profile structure is as follows
+```json
+"plsql-executor.profiles": [
+        {
+            "name": "dev",
+            "connectionString": {
+                "user": "<username>",
+                "password": "<password>",
+                "dbAddress": "<host>",
+                "dbService": "<serviceName>"
+            }
+        }
+    ]
+```
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+To report any problems please create an issue on the [Repository GitHub](https://github.com/giane88/plsql-executor/issues)
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
+* [Add configuration contrubutes](https://github.com/giane88/plsql-executor/issues/2)
+* [Write readme file](https://github.com/giane88/plsql-executor/issues/3)
+* [Add keybindings for running commands](https://github.com/giane88/plsql-executor/issues/4)
+* [Manage space in script's path](https://github.com/giane88/plsql-executor/issues/5)
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**

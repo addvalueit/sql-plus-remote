@@ -1,8 +1,17 @@
 {
   "name": "plsql-executor",
-  "displayName": "PLSQL Executor",
-  "description": "This extension execute the PL/SQL script using plsql plus",
-  "version": "0.0.1",
+  "displayName": "SQLPlus Remote Executor",
+  "description": "This extension execute the PL/SQL script using SQLPlus",
+  "icon": "images/dbi.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/giane88/plsql-executor" 
+  },
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -39,7 +48,7 @@
   },
   "contributes": {
     "configuration": {
-      "title": "PLSQL Executor",
+      "title": "SQLPlus Remote Executor",
       "properties": {
         "plsql-executor.sqlplusPath": {
           "type": "string",
