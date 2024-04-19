@@ -1,4 +1,4 @@
-# SQLPlus Remote Executor README
+# SQLPlus Remote Executor
 
 The "SQLPlus Remote Executor" extension for Visual Studio Code provides a powerful tool for Oracle database developers and administrators who wish to execute SQL scripts remotely using SQLPlus. Integrating directly with VS Code, this extension simplifies the process of connecting and executing SQL scripts on Oracle databases from any location.
 
