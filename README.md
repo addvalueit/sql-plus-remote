@@ -4,13 +4,13 @@ The "SQLPlus Remote Executor" extension for Visual Studio Code provides a powerf
 
 ## Features
 
-* __Simplified Connection__: Quickly access your Oracle databases by entering essential connection information directly from the VS Code user interface.
-
-* __Connection Management__: Save your favorite connection configurations for quick and hassle-free access to different Oracle databases.
+* __Multiple connetion__: Added the possibility to manage multiple connection within differnt DB or schema.
 
 * __Remote Execution__: Use the SQLPlus tool to run SQL scripts directly on your Oracle database, regardless of the physical location of the database using shortcut ```Ctrl+F3```.
 
-* __Displaying Results__: Visualizza i risultati delle query direttamente in VS Code, facilitando l'analisi e la comprensione dei dati restituiti.
+* __Connection Management__: Save your favorite connection configurations for quick and hassle-free access to different Oracle databases.
+
+* __Displaying Results__: Display the result directly into VS Code
 
 * __Multi-Database Compatibility__: It supports connecting to several Oracle databases at once, allowing you to work on multiple projects without having to constantly reconfigure connections.
 
@@ -50,4 +50,8 @@ To report any problems please create an issue on the [Repository GitHub](https:/
 * [Write readme file](https://github.com/giane88/plsql-executor/issues/3)
 * [Add keybindings for running commands](https://github.com/giane88/plsql-executor/issues/4)
 * [Manage space in script's path](https://github.com/giane88/plsql-executor/issues/5)
+
+### 2.0.0
+* [Add the reload configuration command](https://github.com/addvalueit/sql-plus-remote/issues/5)
+* [Changed the banner colour](https://github.com/addvalueit/sql-plus-remote/issues/3)
 

@@ -126,6 +126,12 @@
         "title": "Select Profile",
         "category": "PLSQL",
         "icon": "$(terminal)"
+      },
+      {
+        "command": "plsql-executor.reloadConfig",
+        "title": "Reload Configuration",
+        "category": "PLSQL",
+        "icon": "$(debug-restart)"
       }
     ],
     "keybindings":[
