@@ -4,7 +4,7 @@
   "description": "This extension execute the PL/SQL script using SQLPlus",
   "icon": "images/dbi.png",
   "galleryBanner": {
-    "color": "#C80000",
+    "color": "#F5AA00",
     "theme": "dark"
   },
   "repository": {
